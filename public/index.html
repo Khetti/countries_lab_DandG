@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Countries</title>
+    <script src="./js/bundle.js">
+
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Countries</h1>
+      <h2>Total Population: {{ totalPopulation }}</h2>
+      <input placeholder="Enter Country" type="text" v-model="findCountry.name">
+      <div class="country" v-for="country in filterCountries">
+        <p>Name: {{ country.name }}</p>
+        <p>Flag: <img :src="country.flag"></p>
+
+      </div>
+    </div>
+  </body>
+</html>
